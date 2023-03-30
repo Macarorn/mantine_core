@@ -7,7 +7,13 @@ import {
   UnstyledButton,
   useMantineTheme,
 } from "@mantine/core";
-import { PlayerPlay, Settings, Playlist, Plus, PlaylistAdd } from "tabler-icons-react";
+import {
+  PlayerPlay,
+  Settings,
+  Playlist,
+  Plus,
+  PlaylistAdd,
+} from "tabler-icons-react";
 
 export default function Home() {
   const theme = useMantineTheme();
@@ -62,6 +68,45 @@ export default function Home() {
           <ActionIcon color="dark" size="xl" variant="transparent">
             +5
           </ActionIcon>
+        </Group>
+        <Group
+          mt="sm"
+          mb="sm"
+          position="center"
+          mx="auto"
+          direction="column"
+          height="90px"
+        >
+          <UnstyledButton style={{ height: "100", width: "260px" }}>
+            <Group
+              spacing="none"
+              p="lg"
+              direction="column"
+              mt="sm"
+              mx="auto"
+              position="center"
+              style={{
+                background: "rgb(238, 238,238)",
+                border: "1px dashed rgb(189, 189, 189)",
+              }}
+            >
+              <Box size="md" radius="xs">
+                <Plus style={{ color: "gray" }} />
+              </Box>
+              <Text variant="light" size="xs" color="gray">
+                Add Task
+              </Text>
+            </Group>
+          </UnstyledButton>
+        </Group>
+        <Group
+          mx="auto"
+          style={{ widht: "260px", justifyContent: "space-between" }}
+          position="right"
+        >
+          <Text size="xs"> 🕶️ Hide complete</Text>
+          <Text size="xs"> 🎉 clear complete</Text>
+          <Text size="xs"> ✅ clear all</Text>
         </Group>
       </Group>
     </Group>
